@@ -1,0 +1,59 @@
+.container {
+  position: absolute;
+  z-index: 3;
+  background-image: url("../assets/mount1.jpg");
+  width: 500px;
+  height: 700px;
+  border-radius: 5% 5% 5% 5%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.switcher {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 60px;
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: antiquewhite;
+  padding: 2px;
+  border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
+  text-align: center;
+}
+
+.switcher:hover {
+  cursor: pointer;
+  border: 2px solid cornflowerblue;
+}
+
+.span_med {
+  margin-top: 2px;
+  font-weight: normal;
+}
+.span_bold {
+  margin-top: 2px;
+  font-weight: bold;
+}
+
+@media screen and (max-device-width: 1000px) {
+  .container {
+    z-index: unset;
+    position: static;
+    margin: 20px auto;
+    width: 99%;
+    height: 800px;
+    justify-content: space-around;
+  }
+  .switcher {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 80px;
+    height: 80px;
+    position: relative;
+    top: unset;
+    left: unset;
+    font-size: 35px;
+  }
+}

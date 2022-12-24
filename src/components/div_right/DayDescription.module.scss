@@ -1,0 +1,16 @@
+.description {
+  margin: 0 auto;
+  padding: 10px;
+  color: white;
+  font-size: 30px;
+  text-align: left;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px){
+  .description {
+    p {
+      font-size: 3rem;
+    }
+  }
+}

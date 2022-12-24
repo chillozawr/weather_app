@@ -1,0 +1,73 @@
+.container {
+  margin: 0 auto;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-x: auto;
+  vertical-align: center;
+}
+
+.dayContainer {
+  background-color: #272E37;
+  margin: 0 5px;
+  min-width: 100px;
+  width: 150px;
+  height: 150px;
+  border-radius: 12% 12% 12% 12%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.dayContainer:hover {
+  cursor: pointer;
+  border: 2px solid cornflowerblue;
+}
+
+.dayActive {
+  background-color: white;
+  color: black;
+}
+
+::-webkit-scrollbar{
+  width: 5px;
+  background:gray;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: cornflowerblue;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    height: 50vw;
+  }
+
+  .dayContainer {
+    width: 35%;
+    height: 40vw;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    height: 50vw;
+  }
+
+  .dayContainer {
+    width: 35%;
+    height: 40vw;
+  }
+}
