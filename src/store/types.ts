@@ -16,12 +16,6 @@ export type Weather = {
   days: Day[];
 };
 
-export type WeatherHour = {
-  address: string;
-  timezone: string;
-  hours: Day[];
-};
-
 export type Hour = {
   datetime: string;
   temp: number;

@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import styles from './ChangeLocation.module.scss';
-import { useActions, useAppSelector } from '../../hooks';
+import { useActions } from '../../hooks';
 
 const ChangeLocation = () => {
   const [newCity, setNewCity] = useState('');
-  const { setShowModal, setCity } = useActions();
+  const { setCity } = useActions();
   const submitChanging = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setCity(newCity);
     localStorage.setItem('currentCity', newCity);
-    setShowModal(false);
+    setNewCity('');
   };
 
   const onEditCityHandler = (e: React.KeyboardEvent<HTMLInputElement>) => {

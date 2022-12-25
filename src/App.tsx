@@ -11,7 +11,7 @@ import Hourly from './pages/day/Hourly';
 import { Weather } from './store/types';
 
 function App() {
-  const { setWeather, setToday, setCity, setIsGeoLocation } = useActions();
+  const { setWeather, setToday, setCity, setIsGeoLocation, setShowModal } = useActions();
   const { city, isWeek, isGeoLocation } = useAppSelector((state) => state.weather);
   const [triggerCity] = useLazyGetWeatherWeekQuery();
   const [triggerGeoLoc] = useLazyGetWeatherByLocationQuery();
@@ -33,14 +33,20 @@ function App() {
   };
 
   const errorGeo = async () => {
-    const result = await triggerCity(
-      localStorage.getItem('currentCity')
-        ? localStorage.getItem('currentCity')!.toString()
-        : city
-        ? city
-        : 'Saratov',
-    ).unwrap();
-    setData(result);
+    try {
+      const result = await triggerCity(
+        localStorage.getItem('currentCity')
+          ? localStorage.getItem('currentCity')!.toString()
+          : city
+            ? city
+            : 'Saratov',
+      ).unwrap();
+      setData(result);
+      setShowModal(false);
+    } catch (e: any) {
+      alert(e.data)
+    }
+
   };
 
   useEffect(() => {

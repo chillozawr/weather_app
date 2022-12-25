@@ -21,7 +21,7 @@ import thunder_showers_day from '../../src/assets/weather-icons/thunder-showers-
 import thunder_showers_night from '../../src/assets/weather-icons/thunder-showers-night.svg';
 import wind from '../../src/assets/weather-icons/wind.svg';
 
-const API_KEY = 'ME6XXNCVL2U8AHXJV5Y942Q56';
+const API_KEY = 'AT77ZRW9TM5N52BHDMKZETM28';
 
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const shortDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
