@@ -10,5 +10,6 @@
 @media screen and (max-width: 1000px) {
   .container {
     min-height: 200vh;
+    overflow-x: hidden;
   }
 }

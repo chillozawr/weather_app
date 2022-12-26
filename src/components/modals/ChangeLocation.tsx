@@ -27,6 +27,7 @@ const ChangeLocation = () => {
             placeholder={'Choose new location...'}
             value={newCity}
             onChange={onEditCityHandler}
+            autoFocus
           />
         </form>
       </div>
